@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/40a3572c09.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel='stylesheet' href='css/style.css'>
+    <title>AnimeBlog</title>
+</head>
+
+<body id='home' data-spy='scroll' ,data-target='#main-nav'>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id='main-nav'>
+        <div class="container">
+            <a href="#home" class="navbar-brand">
+                <img src="img/anime_logo.png" width='50' height='50'>
+                <img class="d-inline align-middle pt-2" src="https://fontmeme.com/permalink/200706/24b1f90abc4dbe076232e7dc84ba36ee.png" />
+            </a>
+            <button class="navbar-toggler" data-toggle='collapse' data-target='#navbarCollapse '>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarCollapse" class='collapse navbar-collapse'>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#authors" class="nav-link">Meet Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- SHOWCASE -->
+    <section id="showcase" class="py-5">
+        <div class="primary-overlay text-white">
+            <div class="container">
+                <div>
+                    <!-- <div class="col-lg-6">
+                        <img src="img/book.png" alt="" class="img-fluid d-none d-lg-block">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="bg-dark text-white pb-5 pt-0">
+        <div class="container">
+
+            <div class="col-lg-12 mb-3 text-center">
+                <h1 class="display-6 pt-2">Discuss your favorite anime and manga here</h1>
+                <blockquote class="blockquote">
+                    <p class="lead">Not giving other person a choice is doesn't really qualify as a discussion. </p>
+                    <footer class="blockquote-footer">Onna Shinakan, <cite title="Goblin Slayer">Goblin Slayer</cite></footer>
+                </blockquote>
+                <a href="#" class="btn btn-outline-secondary btn-lg text-white">
+                    <i class="fa fa-arrow-right"></i> Take me there
+                </a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control form-control-lg mb-resp" placeholder='Enter Name'>
+                </div>
+                <div class="col-md-4">
+                    <input type="email" class="form-control form-control-lg mb-resp" placeholder='Enter Email'>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary btn-lg btn-block">
+                        <i class="fas fa-envelope-open"></i> Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BOXES -->
+    <section id="boxes" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-center border-card mb-resp">
+                        <div class="card-body">
+                            <h3 class="text-gradient">Discuss Manga</h3>
+                            <p class="text-muted">Discuss the latest events in manga of your favorite manga series.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center colored-cards text-white mb-resp">
+                        <div class="card-body">
+                            <h3>Theories & Facts</h3>
+                            <p>Discuss theories regarding your favorite anime characters and arc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-card mb-resp">
+                        <div class="card-body">
+                            <h3 class="text-gradient">Art</h3>
+                            <p class="text-muted">Display the love for anime with the work of art you created.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center colored-cards text-white">
+                        <div class="card-body">
+                            <h3>Polls</h3>
+                            <p>Conduct polls for all members and have discusion on that.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT / WHY SECTION-->
+    <section id="about" class="py-5 bg-light text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="info-header mb-5">
+                        <h1 class="text-gradient pb-3">Why This Blog?</h1>
+                        <p class="lead pb-3">Here you can discuss all your favorite animes post your art and you can conduct polls all for the anime you love.</p>
+                    </div>
+                    <!-- Accordion -->
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <div href="#collapse1" data-toggle='collapse' data-parent='#accordion'>
+                                        <i class="fas fa-arrow-circle-down">
+                                        </i> Introduce Yourself
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id="collapse1" class="collapse show">
+                                <div class="card-body">
+                                    If you are new to our blog login and let us know more about yourself, and get to know other members. You can even join the specific anime groups and their discord server if they have one.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <div href="#collapse2" data-toggle='collapse' data-parent='#accordion'>
+                                        <i class="fas fa-arrow-circle-down">
+                                        </i> Discuss Anime in depth
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id="collapse2" class="collapse">
+                                <div class="card-body">
+                                    Discuss all things about animes, not specific to any particular series or genre. For discussing all aspects of anime! Characters, plot, relationships, events, general anime topics you can join anime specific groups.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <div href="#collapse3" data-toggle='collapse' data-parent='#accordion'>
+                                        <i class="fas fa-arrow-circle-down">
+                                        </i> Submit Your Art
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id="collapse3" class="collapse">
+                                <div class="card-body">
+                                    We organize monthly art compitetion where you can submit your artwork of the anime you love and try to win our giveaways. You can also view all the artwork in the gallery which is in our future works.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- AUTHORS -->
+    <section id="authors" class="my-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="info-header mb-5">
+                        <h1 class="text-primary pb-3">Meet Our Team</h1>
+                        <p class="lead">These hardcore anime lovers are behind this fantastic anime blog site. They put in their hardwork to curate the artworks, try and find subbed and dubbed anime streams and most importantly handle all the rules and regulation of our community.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mb-resp-author-img">
+                        <div class="card-body">
+                            <img src="img/person1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                            <h3>Naruto</h3>
+                            <h5 class='text-muted'>Lead Animator</h5>
+                            <p>I worked in some prestigious anime studios to create some notable anime series as well as movies, most notable being 'Akira'. Watch Anime.</p>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4">
+                                    <a href='http://facebook.com'>
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href='http://twitter.com'>
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href='http://instagram.com'>
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mb-resp-author-img">
+                        <div class="card-body">
+                            <img src="img/person2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                            <h3>Goku</h3>
+                            <h5 class='text-muted'>Lead Manga Artist</h5>
+                            <p>I have worked in creating some manga masterpiece like the pain arc of naruto and creater of adult comedy manga 'Prison School'. Read Manga.</p>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4">
+                                    <a href='http://facebook.com'>
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href='http://twitter.com'>
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href='http://instagram.com'>
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card mb-resp-author-img">
+                        <div class="card-body">
+                            <img src="img/person3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                            <h3>Asta</h3>
+                            <h5 class='text-muted'>Art Curator</h5>
+                            <p>I have judged and organized many cosplay events and anime art events in past and is an esteemed member of annual anime art event held in Tokyo.</p>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4">
+                                    <a href='http://facebook.com'>
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href='http://twitter.com'>
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href='http://instagram.com'>
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="img/person4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                            <h3>Gutz</h3>
+                            <h5 class='text-muted'>Developer and Anime Lover</h5>
+                            <p>I have worked with some of the best organization in , my love of anime increased while working on a website of most ruthless anime 'Berserk'. </p>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4">
+                                    <a href='http://facebook.com'>
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href='http://twitter.com'>
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <a href='http://instagram.com'>
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h3>Get In Touch</h3>
+                    <p class="lead">Want to know more about us and how we operate</p>
+                    <form>
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                                <span class=" contact-form input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder='Name'>
+                        </div>
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                                <span class="contact-form input-group-text">
+                                    <i class="fas fa-envelope-open"></i>
+                                </span>
+                            </div>
+                            <input type="email" class="form-control" placeholder='Email'>
+                        </div>
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                                <span class="contact-form input-group-text">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </span>
+                            </div>
+                            <textarea class="form-control" placeholder='Message' rows='5'>
+              </textarea>
+                        </div>
+                        <input type="submit" value="Submit" class='btn btn-primary btn-lg btn-block'>
+                    </form>
+                </div>
+                <div class="col-lg-3 align-self-center resp-img">
+                    <img src="img/anime_logo.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer id="main-footer" class="pt-2 colored-cards text-white">
+        <div class="container">
+            <div class="row text-right">
+                <div class="col-md-6 ml-auto">
+                    <p class="lead">
+                        Copyright &copy; <span id="year"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+    // Get the current year of copyright
+
+    $('#year').text(new Date().getFullYear());
+
+    // Init ScrollSpy
+
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Add smooth scrolling
+    $('#main-nav a').on('click', function(e) {
+        // Check for a hash value
+        if (this.hash !== '') {
+            // Prevent default behavior
+            e.preventDefault();
+
+            // Store hash
+            const hash = this.hash;
+
+            // Animate smooth scroll
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function() {
+                // Add hash to URL after scroll
+                window.location.hash = hash;
+            });
+        }
+    });
+    </script>
+</body>
+
+</html>
