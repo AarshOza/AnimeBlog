@@ -4,7 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
     <script src="https://kit.fontawesome.com/40a3572c09.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('user_2VZT14aZocQVYvGkIImPa');
+        })();
+    </script>
+
+    <script type="text/javascript">
+        function validateEmail(emailField) {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+            if (emailField.value == "" || reg.test(emailField.value) == true) {
+                document.getElementById("emailError").innerHTML = 'The email is valid';
+                document.getElementById("emailError").className = "valid-feedback";
+                document.getElementById("email").className = "form-control is-valid";
+                return false;
+            }
+            document.getElementById("emailError").innerHTML = 'Invalid Email Address';
+            document.getElementById("emailError").className = "invalid-feedback";
+            document.getElementById("email").className = "form-control is-invalid";
+            return true;
+
+        }
+
+        function validateName(nameField) {
+            var hasNumber = /\d/;
+            if (nameField.value == "" || hasNumber.test(nameField.value) == false) {
+                document.getElementById("nameError").innerHTML = 'The name looks good';
+                document.getElementById("nameError").className = "valid-feedback";
+                document.getElementById("name").className = "form-control is-valid";
+
+                return false;
+            }
+            document.getElementById("nameError").innerHTML = 'Please enter name without numbers';
+            document.getElementById("nameError").className = "invalid-feedback";
+            document.getElementById("name").className = "form-control is-invalid";
+            return true;
+        }
+
+        function validateMessage(messageField) {
+            if (messageField.value != "") {
+                document.getElementById("messageError").innerHTML = '';
+                document.getElementById("messageError").className = "valid-feedback";
+                document.getElementById("message").className = "form-control is-valid";
+
+                return false;
+            }
+            document.getElementById("messageError").innerHTML = 'The message is required';
+            document.getElementById("messageError").className = "invalid-feedback";
+            document.getElementById("message").className = "form-control is-invalid";
+            return true;
+        }
+
+        document.addEventListener('click', function (event) {
+            var nameValue = document.getElementById("name").value;
+            var emailValue = document.getElementById("email").value;
+            var messageValue = document.getElementById("message").value;
+
+            var templateParams = {
+                app_name: "AnimeBlog",
+                from_name: emailValue,
+                to_name: 'aarshoza@gmail.com',
+                message: messageValue,
+                name: nameValue
+            };
+            // this.id= 'contact-form'
+
+            // If the clicked element doesn't have the right selector, bail
+            if (!event.target.matches('#submit')) return;
+
+            // Don't follow the link
+            event.preventDefault();
+
+            // Log the clicked element in the console
+            //  emailjs.sendForm('service_vm0usri','template_2bdwvqv', this);
+            emailjs.send('service_vm0usri', 'template_2bdwvqv', templateParams)
+            .then(function(response) {
+                document.getElementById("name").innerHTML = "";
+                document.getElementById("email").innerHTML = "";
+                document.getElementById("message").innerHTML = "";
+                var sendButton = document.getElementById("submit");
+                sendButton.setAttribute('disabled','');
+                var submitText = document.getElementById("submitText");
+                submitText.innerHTML = 'Sit back and relax your Email is sent';
+                submitText.setAttribute('class','text-success')
+            }, function(error) {
+            console.log('FAILED...', error);
+            document.getElementById("name").innerHTML = "";
+            document.getElementById("email").innerHTML = "";
+            document.getElementById("message").innerHTML = "";
+            var sendButton = document.getElementById("submit");
+            sendButton.setAttribute('disabled','');
+            var submitText = document.getElementById("submitText");
+            submitText.innerHTML = 'Cannot send email please try again after some time';
+            submitText.setAttribute('class','text-danger')
+            });
+
+        }, false);
+    </script>
+
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel='stylesheet' href='css/style.css'>
     <title>AnimeBlog</title>
@@ -310,14 +411,16 @@
                 <div class="col-lg-9">
                     <h3>Get In Touch</h3>
                     <p class="lead">Want to know more about us and how we operate</p>
-                    <form>
+                    <form id='contact-form'>
                         <div class="input-group input-group-lg mb-3">
                             <div class="input-group-prepend">
                                 <span class=" contact-form input-group-text">
                                     <i class="fas fa-user"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" placeholder='Name'>
+                            <input id="name" name="name" type="text" class="form-control" required
+                                onchange="validateName(this);" placeholder='Name'>
+                            <div id="nameError" class="" />
                         </div>
                         <div class="input-group input-group-lg mb-3">
                             <div class="input-group-prepend">
@@ -325,7 +428,9 @@
                                     <i class="fas fa-envelope-open"></i>
                                 </span>
                             </div>
-                            <input type="email" class="form-control" placeholder='Email'>
+                            <input onchange="validateEmail(this);" id="email" required name="from_name" type="email"
+                                class="form-control" placeholder='Email'>
+                            <div id="emailError" class="" />
                         </div>
                         <div class="input-group input-group-lg mb-3">
                             <div class="input-group-prepend">
@@ -333,10 +438,12 @@
                                     <i class="fas fa-pencil-alt"></i>
                                 </span>
                             </div>
-                            <textarea class="form-control" placeholder='Message' rows='5'>
-              </textarea>
+                            <textarea id="message" name="message"   class="form-control" required onchange="validateMessage(this)" placeholder='Message' rows='5'>
+                            </textarea>
+                            <div id="messageError" class="" />
                         </div>
-                        <input type="submit" value="Submit" class='btn btn-primary btn-lg btn-block'>
+                        <input id="submit" value="Submit" type="submit" class='btn btn-primary btn-lg btn-block'>
+                        <p id="submitText" class=""></p>
                     </form>
                 </div>
                 <div class="col-lg-3 align-self-center resp-img">
